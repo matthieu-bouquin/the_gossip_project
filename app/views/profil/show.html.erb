@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TheGossipProject</title>
+
+</head>
+
+
+
+<body>
+    
+    <h1>Profil de <%= user.first_name + user.last_name%> !</h1>
+    
+    <p>
+    Description: <%= user.description %>
+    </p>
+    
+    <p>
+    Email: <%= user.email %><br/>
+    Âge: <%= user.age %><br/>
+    Ville: <%= user.city.name %>
+    </p>
+
+</body>
+
+</html>

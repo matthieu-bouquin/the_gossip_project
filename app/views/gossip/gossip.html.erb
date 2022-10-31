@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TheGossipProjectViews</title>
+</head>
+
+<body>
+
+  <% gossip = Gossip.find(params[:id]) %>
+  <h1>Voici le gossip numéro <%= gossip.id %>:</h1>
+
+  <p> Auteur : <%= link_to "#{gossip.user.first_name + gossip.user.last_name}",
+  user_show_path(gossip.user.first_name) %>
+  </p>
+
+  <p>
+  Titre: <%= gossip.title %><br/>
+  Ragot : <%= gossip.content %><br/>
+  </p>
+
+</body>
+</html>

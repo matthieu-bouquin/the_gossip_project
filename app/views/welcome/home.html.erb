@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TheGossipProject</title>
+</head>
+
+<body>
+  
+  <p>Voici les ragots des moussaillons:</p>
+
+    <% Gossip.all.each_with_index do |gossip, index| %>
+    <div class="card" style="width: 15rem;">
+
+      <div class="card-body">
+        <h3 class="card-title"><%= gossip.title %></h3>
+
+        <p class="card-text">Auteur: <%= link_to "#{gossip.user.first_name}", 
+        user_show_path(gossip.user.first_name) %>
+        </p>
+    
+        <a href="/gossip/<% index %>" >agrandir</a>
+      </div>
+    </div>
+<% end %>
+</body>
+
+
+</html>
